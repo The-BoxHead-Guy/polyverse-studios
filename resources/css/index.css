@@ -1,0 +1,15 @@
+:root {
+  --font-exo: "Exo 2", sans-serif;
+  --font-chakra: "Chakra Petch", sans-serif;
+  --font-default-size: 16px;
+}
+
+html {
+  font-size: var(--font-default-size);
+  box-sizing: border-box;
+}
+
+body {
+    background-color: --bg-color-dark;
+    color: --text-color-light;
+}
