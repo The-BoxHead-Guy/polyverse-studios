@@ -1,4 +1,5 @@
 :root {
+  /* font-styles */
   --font-exo: "Exo 2", sans-serif;
   --font-chakra: "Chakra Petch", sans-serif;
   --font-default-size: 16px;
@@ -6,16 +7,30 @@
   --font-weight-medium: 500;
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
+  --font-size-small: 0.75rem;
+  --font-size-medium: 1rem;
+  --font-size-large: 1.5rem;
 
   --bg-color-dark: #2d2c33;
 
   /* color palette */
   --white: #f5f5f5;
   --black: #0f0f0f;
-  --cosmic-purple: #5041b3;
+  --cosmic-purple: #5041b4;
+  --purple: #514593;
+  --dark-purple: #4c4673;
+  --dark-purple-tint-1: #252333;
+  --dark-purple-tint-2: #201d33;
+  --decayed-purple: #403d53;
+  --gray: #2d2c33;
+  --dark-gray: #2b2a33;
+  --gray-800: #1d1d20;
 
   /* dimensions */
   --border: 0.4rem;
+  --padding-small: 0.5rem;
+  --padding-medium: 1.25rem;
+  --padding-large: 1.75rem;
 }
 
 *,
@@ -40,7 +55,7 @@ body {
   height: 100%;
   font-family: var(--font-exo);
   font-weight: var(--font-weight-regular);
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 li {
@@ -52,16 +67,21 @@ a {
   color: var(--white);
 }
 
+section {
+  position: relative;
+  top: 5rem;
+}
+
 /* nav */
 
 header {
   width: 100%;
   background-color: var(--cosmic-purple);
-
   /* Keeps the nav at the top */
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .nav {
@@ -138,8 +158,6 @@ header {
 /* ?Remember to set the correct hero image resolution depending on screen's size */
 .hero {
   height: 24rem;
-  position: relative;
-  top: 5rem;
   background-image: url(/resources/img/hero-image-small.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -179,4 +197,44 @@ header {
   border: 2px solid var(--white);
   border-radius: var(--border);
   background-color: transparent;
+}
+
+/* description section */
+
+.description {
+  padding: var(--padding-large);
+  height: auto;
+  margin: 2rem 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.description__container {
+  text-align: center;
+}
+
+.description__container:not(:first-child, :nth-child(3)) {
+  background-color: var(--gray-800);
+  border-radius: var(--border);
+  padding: var(--padding-medium);
+  margin: 2rem 0;
+  text-align: left;
+}
+
+.description__text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-wrap: pretty;
+}
+
+.description__icon {
+  font-size: calc(var(--font-size-large) * 2);
+  background: var(--purple);
+  border-radius: var(--border);
+  padding: var(--padding-small);
+  margin-right: 1.5rem;
+  float: left;
+  color: var(--white);
 }
