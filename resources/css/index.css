@@ -16,7 +16,7 @@
   /* color palette */
   --white: #f5f5f5;
   --black: #0f0f0f;
-  --cosmic-purple: #5041b3;
+  --cosmic-purple: #5041b4;
   --purple: #514593;
   --dark-purple: #4c4673;
   --dark-purple-tint-1: #252333;
@@ -55,7 +55,7 @@ body {
   height: 100%;
   font-family: var(--font-exo);
   font-weight: var(--font-weight-regular);
-  overflow: auto;
+  overflow-x: hidden;
 }
 
 li {
@@ -77,11 +77,11 @@ section {
 header {
   width: 100%;
   background-color: var(--cosmic-purple);
-
   /* Keeps the nav at the top */
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 
 .nav {
