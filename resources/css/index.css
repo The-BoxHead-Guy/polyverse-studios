@@ -72,6 +72,10 @@ section {
   top: 5rem;
 }
 
+p {
+  font-size: var(--font-size-large);
+}
+
 /* nav */
 
 header {
@@ -230,11 +234,12 @@ header {
 }
 
 .description__icon {
-  font-size: calc(var(--font-size-large) * 2);
-  background: var(--purple);
+  background: linear-gradient(var(--cosmic-purple), var(--dark-purple-tint-2));
+  border: 1px solid var(--white);
   border-radius: var(--border);
   padding: var(--padding-small);
   margin-right: 1.5rem;
   float: left;
   color: var(--white);
+  font-size: 3rem;
 }
