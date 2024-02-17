@@ -25,6 +25,7 @@
   --gray: #2d2c33;
   --dark-gray: #2b2a33;
   --gray-800: #1d1d20;
+  --decayed-white: #c3c3c3;
 
   /* dimensions */
   --border: 0.4rem;
@@ -271,6 +272,8 @@ header {
 
 .mission-statement__title {
   font-size: calc(var(--font-size-medium) + 3.5vw);
+  text-align: center;
+  letter-spacing: 1px;
 }
 
 .mission-statement__text {
@@ -284,4 +287,88 @@ header {
   max-inline-size: 100%;
   block-size: auto;
   box-shadow: 2px 4px 6px var(--dark-purple-tint-2);
+}
+
+/* products */
+
+.products {
+  padding: var(--padding-large);
+  width: 100%;
+  height: auto;
+
+  .products__title {
+    font-size: calc(var(--font-size-medium) + 3.5vw);
+    text-align: center;
+    margin: 0 0 2.5rem 0;
+    letter-spacing: 1px;
+  }
+
+  .products__subtitle {
+    font-size: calc(var(--font-size-medium) + 2vw);
+    margin-top: 2.25rem;
+  }
+}
+
+/* accordeon styles */
+.products__items {
+  width: 100%;
+  height: 3rem;
+  padding-inline-start: 1rem;
+  background-color: var(--cosmic-purple);
+  color: var(--white);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-chakra);
+  border: none;
+  border-radius: var(--border);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  margin: 1.25rem 0;
+
+  &:hover {
+    background-color: var(--dark-purple-tint-1);
+  }
+}
+
+.products__items + input[type="checkbox"] {
+  display: none;
+}
+
+.products__desc-panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  color: var(--decayed-purple);
+  margin-bottom: 1.25rem;
+  color: var(--decayed-white);
+}
+
+.products__items + input[type="checkbox"]:checked + .products__desc-panel {
+  max-height: 50rem;
+}
+
+.products__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products__img-container {
+  width: 100%;
+  height: auto;
+
+  .products__img {
+    max-inline-size: 100%;
+    block-size: auto;
+    object-fit: cover;
+    border-radius: calc(var(--border) * 1.5);
+    box-shadow: 2px 4px 6px var(--gray-800);
+  }
+}
+
+.products__img-caption {
+  margin-top: 0.75rem;
+  margin-bottom: 3.5rem;
 }
