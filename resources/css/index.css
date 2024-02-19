@@ -88,7 +88,11 @@ h2 {
 
 header {
   width: 100%;
-  background-color: var(--cosmic-purple);
+  background: linear-gradient(
+    to right,
+    var(--cosmic-purple),
+    var(--decayed-purple)
+  );
   /* Keeps the nav at the top */
   position: fixed;
   top: 0;
