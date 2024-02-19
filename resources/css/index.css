@@ -332,8 +332,15 @@ header {
   }
 }
 
-.products__items + input[type="checkbox"] {
+.products__container > input[type="checkbox"] {
   display: none;
+}
+
+.products__items::after {
+  content: "\002B";
+  color: var(--white);
+  font-size: 1.5rem;
+  float: right;
 }
 
 .products__desc-panel {
@@ -345,8 +352,12 @@ header {
   color: var(--decayed-white);
 }
 
-.products__items + input[type="checkbox"]:checked + .products__desc-panel {
+input[type="checkbox"]:checked + .products__items + .products__desc-panel {
   max-height: 50rem;
+}
+
+input[type="checkbox"]:checked + .products__items::after {
+  content: "\2212";
 }
 
 .products__container {
