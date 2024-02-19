@@ -78,6 +78,12 @@ p {
   line-height: 1.4;
 }
 
+h2 {
+  font-size: calc(
+    var(--font-size-medium) + 3.5vw
+  ); /* In order to maintain the font over devices */
+}
+
 /* nav */
 
 header {
@@ -382,4 +388,66 @@ input[type="checkbox"]:checked + .products__items::after {
 .products__img-caption {
   margin-top: 0.75rem;
   margin-bottom: 3.5rem;
+}
+
+/* Platform section */
+.platform {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: var(--padding-large);
+  background: linear-gradient(to top, var(--gray-800), var(--decayed-purple));
+}
+
+.platform__title {
+  margin: 1.25rem 0 0 0;
+  letter-spacing: 1px;
+}
+
+.platform__container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  width: 90%;
+  gap: 0.5rem;
+}
+
+.platform__items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+
+  &:nth-child(1) {
+    .platform__subtitle {
+      margin-bottom: 0;
+    }
+  }
+
+  &:last-child {
+    & > .platform__subtitle {
+      margin-bottom: 3.6rem;
+    }
+  }
+}
+
+.platform__subtitle {
+  margin: 1rem 0;
+}
+
+.platform__img-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform__img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  border-radius: calc(var(--border) * 1.5);
 }
