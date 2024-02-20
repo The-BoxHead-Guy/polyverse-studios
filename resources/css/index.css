@@ -17,6 +17,7 @@
   --white: #f5f5f5;
   --black: #0f0f0f;
   --cosmic-purple: #5041b4;
+  --light-cosmic-yellow: #f9ef5b;
   --purple: #514593;
   --dark-purple: #4c4673;
   --dark-purple-tint-1: #252333;
@@ -25,6 +26,7 @@
   --gray: #2d2c33;
   --dark-gray: #2b2a33;
   --gray-800: #1d1d20;
+  --gray-500: #5f5f69;
   --decayed-white: #c3c3c3;
   --yellow: yellow;
 
@@ -546,11 +548,37 @@ input[type="checkbox"]:checked + .products__items::after {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    width: 100%;
+    height: 100%;
   }
 
   & blockquote::after {
     content: "";
     border: 1px dashed white;
     width: 3%;
+    height: 100%;
+  }
+}
+
+/* footer */
+.footer {
+  background-color: var(--bg-color-dark);
+  height: 7rem;
+  display: grid;
+  place-content: center;
+  margin-top: 5rem;
+  text-align: center;
+
+  & p:last-child {
+    color: var(--gray-500);
+    font-size: var(--font-size-small);
+  }
+
+  & a {
+    color: var(--light-cosmic-yellow);
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
