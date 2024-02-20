@@ -530,3 +530,27 @@ input[type="checkbox"]:checked + .products__items::after {
   padding: 1rem;
   border-radius: calc(var(--border) * 1.5);
 }
+
+/* slogan */
+.slogan {
+  background-color: var(--gray-800);
+  height: 10rem;
+  display: grid;
+  place-content: center;
+  margin-top: 1.75rem;
+
+  & blockquote {
+    font-style: italic;
+    font-family: var(--font-chakra);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  & blockquote::after {
+    content: "";
+    border: 1px dashed white;
+    width: 3%;
+  }
+}
