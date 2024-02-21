@@ -767,4 +767,27 @@ input[type="checkbox"]:checked + .products__items::after {
     gap: 2rem;
     margin: 1.5rem 0;
   }
+
+  .platform__container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+  }
+
+  .platform__items {
+    justify-content: space-between;
+  }
+
+  .platform__title {
+    margin: 1.5rem 0;
+  }
+
+  .platform__subtitle {
+    font-size: calc(var(--font-size-medium) + 0.5vw);
+  }
+
+  .platform__items > figure,
+  .platform__subtitle {
+    flex-grow: 1;
+  }
 }
