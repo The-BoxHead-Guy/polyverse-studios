@@ -26,6 +26,9 @@
   --gray: #2d2c33;
   --dark-gray: #2b2a33;
   --gray-800: #1d1d20;
+  --gray-700: #2b2b2f;
+  --gray-700-transparent: #2b2b2fee;
+  --gray-600: #343439;
   --gray-500: #5f5f69;
   --decayed-white: #c3c3c3;
   --yellow: yellow;
@@ -91,30 +94,65 @@ h3 {
   font-size: calc(var(--font-size-small) + 2vw);
 }
 
+/* Animations */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scale-up {
+  0% {
+    transform: scale(0.85);
+  }
+
+  80% {
+    transform: scale(1.025);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* nav */
 
 header {
   width: 100%;
   background: linear-gradient(
     to right,
-    var(--cosmic-purple),
-    var(--decayed-purple)
+    var(--gray-700-transparent),
+    var(--gray-800)
   );
+
   /* Keeps the nav at the top */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
+  box-shadow: 0 2px 4px var(--gray-800);
 }
 
 .nav {
   font-family: var(--font-chakra);
-  font-size: 1.3rem;
   height: 5rem;
 
   h3 {
-    font-weight: var(--font-weight-regular);
+    font-size: 1.3rem;
+    font-weight: var(--font-weight-bold);
+    line-height: 1.5;
   }
+
+  .nav__icon {
+    font-size: 2rem;
+  }
+
+  animation: fade-in 0.8s ease-in-out;
+  animation: scale-up 1s ease-in-out;
 }
 
 .nav__container {
@@ -123,15 +161,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 1.25rem;
+  padding-inline: 1.35rem;
 }
 
 .nav__items {
   height: 2rem;
-}
-
-.nav__icon {
-  font-size: 2rem;
 }
 
 /* sidebar */
