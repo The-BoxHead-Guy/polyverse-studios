@@ -410,7 +410,8 @@ span + .description__text {
   cursor: pointer;
   margin: 1.25rem 0;
 
-  &:hover {
+  &:hover,
+  :focus {
     background-color: var(--dark-purple-tint-1);
   }
 }
