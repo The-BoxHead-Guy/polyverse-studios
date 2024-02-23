@@ -441,6 +441,7 @@ span + .description__text {
 
 .products__desc-panel {
   max-height: 0;
+  width: min(100%, 40rem);
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
   color: var(--decayed-purple);
@@ -454,6 +455,12 @@ input[type="checkbox"]:checked + .products__items + .products__desc-panel {
 
 input[type="checkbox"]:checked + .products__items::after {
   content: "\2212";
+}
+
+.products__desc::before {
+  content: "Synopsis: ";
+  font-weight: var(--font-weight-bold);
+  color: var(--light-cosmic-yellow);
 }
 
 .products__container {
@@ -562,18 +569,18 @@ input[type="checkbox"]:checked + .products__items::after {
 
 .team__container {
   width: 90%;
-  display: grid;
-  grid-template-rows: 1fr;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2.5rem;
-  grid-auto-flow: row;
+  display: flex;
+  flex-flow: row wrap;
 
   & ul {
+    width: 20rem;
+    flex-grow: 1;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
+    padding: 1.5rem 0;
   }
 }
 
@@ -614,6 +621,7 @@ input[type="checkbox"]:checked + .products__items::after {
   font-style: italic;
   padding: 1rem;
   border-radius: calc(var(--border) * 1.5);
+  max-width: 20rem;
 }
 
 /* slogan */
@@ -899,7 +907,7 @@ input[type="checkbox"]:checked + .products__items::after {
   }
 
   .team__img-container {
-    width: 14rem;
+    width: 16rem;
   }
 
   .team__title {
