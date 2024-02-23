@@ -441,6 +441,7 @@ span + .description__text {
 
 .products__desc-panel {
   max-height: 0;
+  width: min(100%, 40rem);
   overflow: hidden;
   transition: max-height 0.5s ease-in-out;
   color: var(--decayed-purple);
@@ -454,6 +455,12 @@ input[type="checkbox"]:checked + .products__items + .products__desc-panel {
 
 input[type="checkbox"]:checked + .products__items::after {
   content: "\2212";
+}
+
+.products__desc::before {
+  content: "Synopsis: ";
+  font-weight: var(--font-weight-bold);
+  color: var(--light-cosmic-yellow);
 }
 
 .products__container {
